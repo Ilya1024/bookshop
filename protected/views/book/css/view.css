@@ -1,0 +1,49 @@
+.left-part{
+	float:left;
+	width:500px;
+	margin: 20px 0;
+}
+.right-part{
+	float:right;
+	width:200px;
+}
+.view
+{
+	float: left;
+	width: auto;
+}
+.books_image
+{
+	width: 100px;
+	height: 200px;
+	margin-top:30px;
+	margin-left:10px;
+}
+.button-area
+{
+	margin : 10px;
+}
+.back_button, .buy_button
+{
+	margin : 10px;
+	display: inline-block;
+}
+.back_button a,.buy_button a
+{
+	text-decoration: none;
+	border-radius: 5px;
+	width: 100px;
+	height: 20px;
+	padding: 5px 10px;
+	color: black;	
+	background-color: #DFB50E;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;	
+}
+.back_button a:hover,.buy_button a:hover
+{
+	color: #FBD9EA;
+	background-color:#9E870E;
+	text-decoration:none;	
+}

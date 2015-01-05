@@ -1,0 +1,14 @@
+.books_in_purchase_list
+{
+    width : 250px;
+    display:inline-block;
+    margin: 10px;
+    float : right;
+}
+
+.purchase-detail-view
+{
+    margin: 10px;
+    width : 400px;
+    display:inline-block;
+}

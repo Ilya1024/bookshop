@@ -1,0 +1,46 @@
+.left-part{
+	float:left;
+	width:400px;
+}
+.right-part{
+	float:right;
+	width:200px;
+}
+.view
+{
+	float: right;
+	width: auto;
+}
+.books_image
+{
+	margin-top:30px;
+	margin-left:20px;
+}
+.button-area
+{
+	margin : 10px;
+}
+.about_book_button, .buy_button
+{
+	margin : 10px;
+	display: inline-block;
+}
+.about_book_button a, .buy_button a
+{
+	text-decoration: none;
+	border-radius: 5px;
+	width: 100px;
+	height: 20px;
+	padding: 5px 10px;
+	color: black;	
+	background-color: #DFB50E;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;	
+}
+.about_book_button a:hover, .buy_button a:hover
+{
+	color: #FBD9EA;
+	background-color:#9E870E;
+	text-decoration:none;	
+}

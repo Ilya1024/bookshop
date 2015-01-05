@@ -1,0 +1,47 @@
+.books_list
+{
+	width:auto;
+	
+}
+.left_nav_menu, .admin_navigation
+{
+	width: 200px;
+	margin : 30px 5px;
+}
+.navigation_left_block
+{
+    width: 220px;
+    float:left;
+}
+
+div.span-19
+{
+    width: 900px;
+}
+.admin_navigation
+{
+
+}
+.links_navigation_menu li
+{
+    font: bold 12px Arial;
+    color: #645F20;
+    display: block;
+    padding: 2px 0 2px 8px;
+    line-height: 15px;
+    text-decoration: none;
+}
+.links_navigation_menu li:visited
+{
+    color: #645F20;
+}
+.links_navigation_menu li:hover
+{
+    color: #FBD9EA;
+    background-color:#C7C73A;
+    text-decoration:none;
+}
+.links_navigation_menu li:active
+{
+    color: #645F20;
+}
