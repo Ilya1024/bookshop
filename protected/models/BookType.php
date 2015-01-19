@@ -124,6 +124,11 @@ class BookType extends MyActiveRecord
         return CHtml::listData($types->findAll($criteria),'id','title');
     }
 
+    public function getCategoryPath($parent_id)
+    {
+        print($parent_id);die;
+    }
+
 
 
     public function getTypesListByParent($parent_id=0) //для представления в виде меню
@@ -143,7 +148,8 @@ class BookType extends MyActiveRecord
     protected function beforeSave() {
         if(parent::beforeSave()) {
             if($this->isNewRecord) {
-                $this->url = $this->translit($this->title);
+                $parent_cat = $this->model()->findbyPk($this->parent_id);
+                $this->url = $parent_cat->url.$this->translit($this->title);
             }
             return true;
         } else {

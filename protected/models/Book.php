@@ -24,56 +24,7 @@ class Book extends MyActiveRecord implements IECartPosition
 		return '{{book}}';
 	}
 
-    /*
-     * Ужас, ужас
-     */
-    public function getAllTypeParents(array $categories)
-    {
-        $result=$categories;
-        $categories_=array();
-
-        while($categories_=$this->getAllParentsByType($categories))
-        {
-            $categories=$categories_;
-            foreach($categories_ as $c)
-            {
-                array_push($result, $c);
-            }
-        }
-        return $result;
-    }
-
-    public function getAllParentsByType($categories)
-    {
-        if(!is_array($categories) || in_array(0,$categories))
-        {
-            return false;
-        }
-        else
-        {
-            $categories_=array();
-            $criteria = new CDbCriteria();
-            $types = new BookType();
-
-            foreach($categories as $book_type)
-            {
-                $criteria->condition='parent_id='.(int)$book_type;
-                $data = $types->findAll($criteria);
-
-                if(count($data)>0)
-                {
-                    foreach($data as $t)
-                    {
-                        $categories_[] = $t->attributes['id'];
-                    }
-                    return $categories_;
-                }
-                else return false;
-            }
-
-        }
-    }
-
+    
 	/**
 	 * @return array validation rules for model attributes.
 	 */

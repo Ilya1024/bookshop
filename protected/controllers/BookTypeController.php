@@ -49,6 +49,9 @@ class BookTypeController extends Controller
         if(isset($_POST['BookType']))
         {
             $model->attributes=$_POST['BookType'];
+            $model->parent_id=$_POST['BookType']['parent_id'];
+            $model->title=$_POST['BookType']['title'];
+
             if($model->save())
                 $this->redirect(array('admin'));
         }

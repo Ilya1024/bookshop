@@ -35,7 +35,7 @@ $this->menu=array(
         <div class="back_button">
             <?php echo CHtml::link('Назад', array('index')); ?>
         </div>
-        <?php if(!Yii::app()->user->isGuest):?>
+        <?php if(Yii::app()->getModule('user')->isAdmin()):?>
         <div class="buy_button">
             <?php echo CHtml::link('Купить'); ?>
         </div>

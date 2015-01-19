@@ -63,6 +63,8 @@ class Purchase extends CActiveRecord
     {
         if(strtotime($this->purchase_date)<time('Ymd')+(1*24*60*60))
             $this->addError('purchase_date','Дата доставки допускает занчение не ранее, чем через 2 дня после оформления заказа.');
+        if(strtotime($this->purchase_date)>time('Ymd')+(30*24*60*60))
+            $this->addError('purchase_date','Дата доставки допускает занчение не позднее 30 дней с начала оформления заказа.');
     }
 
 	/**

@@ -11292,9 +11292,340 @@ REQUEST_URI=/bookshop/index.php?r=book/admin
 in D:\server\OpenServer\domains\localhost\bookshop\protected\views\book\admin.php (61)
 in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (185)
 in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
-2015/01/03 13:17:26 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
+2015/01/09 12:54:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "crete".' in D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php:483
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(270): CController->missingAction('crete')
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('crete')
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('booktype/crete')
+#3 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bookshop/index.php?r=booktype/crete
+HTTP_REFERER=http://localhost/bookshop/index.php?r=admin/index
+---
+2015/01/09 13:25:39 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "BookType._model".' in D:\server\OpenServer\domains\localhost\bookshop\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(161): CComponent->__set('_model', Object(BookType))
+#1 D:\server\OpenServer\domains\localhost\bookshop\protected\models\BookType.php(151): CActiveRecord->__set('_model', Object(BookType))
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1071): BookType->beforeSave()
+#3 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookTypeController.php(55): CActiveRecord->save()
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(49): BookTypeController->actionCreate()
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('create')
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('booktype/create')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/bookshop/index.php?r=booktype/create
+HTTP_REFERER=http://localhost/bookshop/index.php?r=booktype/create
+---
+2015/01/09 13:25:49 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "BookType._model".' in D:\server\OpenServer\domains\localhost\bookshop\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(161): CComponent->__set('_model', Object(BookType))
+#1 D:\server\OpenServer\domains\localhost\bookshop\protected\models\BookType.php(151): CActiveRecord->__set('_model', Object(BookType))
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1071): BookType->beforeSave()
+#3 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookTypeController.php(55): CActiveRecord->save()
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(49): BookTypeController->actionCreate()
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('create')
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('booktype/create')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/bookshop/index.php?r=booktype/create
+HTTP_REFERER=http://localhost/bookshop/index.php?r=booktype/create
+---
+2015/01/09 13:26:00 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "BookType.model".' in D:\server\OpenServer\domains\localhost\bookshop\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(161): CComponent->__set('model', Object(BookType))
+#1 D:\server\OpenServer\domains\localhost\bookshop\protected\models\BookType.php(151): CActiveRecord->__set('model', Object(BookType))
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1071): BookType->beforeSave()
+#3 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookTypeController.php(55): CActiveRecord->save()
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(49): BookTypeController->actionCreate()
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('create')
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('booktype/create')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/bookshop/index.php?r=booktype/create
+HTTP_REFERER=http://localhost/bookshop/index.php?r=booktype/create
+---
+2015/01/09 13:39:14 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'programmirovanie-php'' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `tbl_book_type` `t` WHERE url=%:url.
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (159)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/09 13:39:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'programmirovanie-php'' at line 1. The SQL statement executed was: SELECT * FROM `tbl_book_type` `t` WHERE url=%:url' in D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(159): CActiveRecord->findAll('url=%:url', Array)
+#4 [internal function]: BookController->actionIndex('7')
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('index')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#17 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+---
+2015/01/09 13:43:53 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `tbl_book_type` `t` WHERE url=:url%.
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (159)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/09 13:43:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT * FROM `tbl_book_type` `t` WHERE url=:url%' in D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(159): CActiveRecord->findAll('url=:url%', Array)
+#4 [internal function]: BookController->actionIndex('7')
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('index')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#17 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+---
+2015/01/09 13:45:11 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'programmirovanie/programmirovanie-php'' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `tbl_book_type` `t` WHERE url LIKE %:url.
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (159)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/09 13:45:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'programmirovanie/programmirovanie-php'' at line 1. The SQL statement executed was: SELECT * FROM `tbl_book_type` `t` WHERE url LIKE %:url' in D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(159): CActiveRecord->findAll('url LIKE %:url', Array)
+#4 [internal function]: BookController->actionIndex('7')
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('index')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#17 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+---
+2015/01/09 13:46:12 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '% 'programmirovanie/programmirovanie-php'' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `tbl_book_type` `t` WHERE url LIKE % :url.
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (159)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/09 13:46:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '% 'programmirovanie/programmirovanie-php'' at line 1. The SQL statement executed was: SELECT * FROM `tbl_book_type` `t` WHERE url LIKE % :url' in D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(159): CActiveRecord->findAll('url LIKE % :url', Array)
+#4 [internal function]: BookController->actionIndex('7')
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('index')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#17 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+---
+2015/01/09 13:47:04 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'programmirovanie/programmirovanie-php'' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `tbl_book_type` `t` WHERE url LIKE %:url.
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (159)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/09 13:47:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'programmirovanie/programmirovanie-php'' at line 1. The SQL statement executed was: SELECT * FROM `tbl_book_type` `t` WHERE url LIKE %:url' in D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(159): CActiveRecord->findAll('url LIKE %:url', Array)
+#4 [internal function]: BookController->actionIndex('7')
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('index')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#17 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+---
+2015/01/09 13:52:46 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select id' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `tbl_book_type` `t` WHERE select id.
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (159)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/09 13:52:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select id' at line 1. The SQL statement executed was: SELECT * FROM `tbl_book_type` `t` WHERE select id' in D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(159): CActiveRecord->findAll('select id', 'url LIKE :url', Array)
+#4 [internal function]: BookController->actionIndex('7')
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('index')
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#17 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+---
+2015/01/09 13:59:30 [error] [exception.CException] exception 'CException' with message 'В классе CDbCriteria и его поведениях не найден метод или замыкание с именем "with".' in D:\server\OpenServer\domains\localhost\bookshop\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(163): CComponent->__call('with', Array)
+#1 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(163): CDbCriteria->with('book')
+#2 [internal function]: BookController->actionIndex('7')
+#3 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#4 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('index')
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+---
+2015/01/09 14:00:10 [error] [exception.CDbException] exception 'CDbException' with message 'Отношение "book" не было определено в active record классе "BookType".' in D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveFinder.php(296): CActiveFinder->buildJoinTree(Object(CJoinElement), 'book')
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(BookType), Array)
+#3 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1355): CActiveRecord->getActiveFinder(Array)
+#4 D:\server\OpenServer\domains\localhost\bookshop\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#5 D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php(164): CActiveRecord->findAll(Object(CDbCriteria))
+#6 [internal function]: BookController->actionIndex('7')
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#16 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): CController->run('index')
+#18 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#19 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+---
+2015/01/09 14:05:27 [error] [php] reset() expects parameter 1 to be array, string given (D:\server\OpenServer\domains\localhost\bookshop\framework\db\schema\CDbCriteria.php:280)
+Stack trace:
+#0 unknown(0): BookController->actionIndex()
+#1 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#2 D:\server\OpenServer\domains\localhost\bookshop\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(133): BookController->runAction()
+#5 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CInlineFilter.php(58): BookController->filterAccessControl()
+#8 D:\server\OpenServer\domains\localhost\bookshop\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CController.php(265): BookController->runActionWithFilters()
+#11 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(282): BookController->run()
+#12 D:\server\OpenServer\domains\localhost\bookshop\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\server\OpenServer\domains\localhost\bookshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\server\OpenServer\domains\localhost\bookshop\index.php(13): CWebApplication->run()
+REQUEST_URI=/bookshop/index.php?r=book/index&book_type=7
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (170)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/12 11:08:42 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
 in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\PurchaseController.php (105)
 in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
-2015/01/05 11:34:04 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Book".
-in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\BookController.php (74)
+2015/01/12 12:45:31 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\PurchaseController.php (105)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/12 12:46:23 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\PurchaseController.php (105)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/12 12:46:56 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\PurchaseController.php (105)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/12 12:47:23 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\PurchaseController.php (105)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/12 12:48:17 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\PurchaseController.php (105)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/12 12:49:04 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\PurchaseController.php (105)
+in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
+2015/01/13 17:06:38 [warning] [application] Не удалось присвоить небезопасный атрибут "purchase_time" класса "Purchase".
+in D:\server\OpenServer\domains\localhost\bookshop\protected\controllers\PurchaseController.php (105)
 in D:\server\OpenServer\domains\localhost\bookshop\index.php (13)
